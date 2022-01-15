@@ -6,4 +6,4 @@ First website
 - firebase cloud storage
 - covers for different songs
 - lyrics tracker
-- edit
+- was trying vscode 
