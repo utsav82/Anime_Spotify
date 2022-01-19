@@ -7,3 +7,4 @@ First website
 - covers for different songs
 - lyrics tracker
 - work on nav here and then merge 
+- updates nav branch using vscode -1 
