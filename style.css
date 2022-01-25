@@ -83,10 +83,44 @@ nav .closebtn {
 }
 
 
+/*Label custom*/
+/* [aria-label] {
+  position: relative;
+}
+  
+[aria-label]:after {
+  content: attr(aria-label);
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 10px;
+  z-index: 5000;
+  pointer-events: none;
+  padding: 8px 10px;
+  line-height: 15px;
+  white-space: nowrap;
+  text-decoration: none;
+  text-indent: 0;
+  overflow: visible;
+  font-size: .9em;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: 1px 0 1px #888;
+  background-color: rgb(27, 27, 27);  
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+}
+
+[aria-label]:hover:after, [aria-label]:focus:after {
+  display: block;
+} */
 
 
+/*styling the player : START*/
 .player {
-  background-color: #0c0f10;
+  background-color: #383838;
   width: 100%;
   z-index: 4;
   display: flex;
@@ -154,12 +188,16 @@ nav .closebtn {
   min-width: var(--button-size);
   position: relative;
   width: var(--button-size);
+  right: 0px;
+  /* transition: 0.2s; */
+  
 }
 .fa-play{
   fill: currentColor;
   cursor: pointer;
   height: 30px;
   width: 30px;
+  
 
 }
 .next{
@@ -200,7 +238,7 @@ nav .closebtn {
   width: 15px;
 
 }
-
+/*player-controls done*/
 
 .seek-bar{
   display: flex;
@@ -254,3 +292,4 @@ nav .closebtn {
   transform: scale(1.2);
   background: #b50000;
 }
+/*seek-bar done*/
