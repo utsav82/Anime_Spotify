@@ -86,7 +86,7 @@ nav .closebtn {
 
 
 .player {
-  background-color: #000;
+  background-color: #0c0f10;
   width: 100%;
   z-index: 4;
   display: flex;
@@ -111,7 +111,7 @@ nav .closebtn {
     align-items: center;
     background: transparent;
     border: none;
-    color: #f8ecfa;
+    color: #bebebe;
     display: flex;
     height: var(--button-size);
     justify-content: center;
@@ -129,7 +129,7 @@ nav .closebtn {
   align-items: center;
   background: transparent;
   border: none;
-  color: #f8ecfa;
+  color: #bebebe;
   display: flex;
   height: var(--button-size);
   justify-content: center;
@@ -147,7 +147,7 @@ nav .closebtn {
   align-items: center;
   background: transparent;
   border: none;
-  color: #f8ecfa;
+  color: #bebebe;
   display: flex;
   height: var(--button-size);
   justify-content: center;
@@ -166,7 +166,7 @@ nav .closebtn {
   align-items: center;
   background: transparent;
   border: none;
-  color: #f8ecfa;
+  color: #bebebe;
   display: flex;
   height: var(--button-size);
   justify-content: center;
@@ -185,7 +185,7 @@ nav .closebtn {
   align-items: center;
   background: transparent;
   border: none;
-  color: #f8ecfa;
+  color: #bebebe;
   display: flex;
   height: var(--button-size);
   justify-content: center;
@@ -242,7 +242,7 @@ nav .closebtn {
   position: relative;
   -webkit-appearance: none;
   box-sizing: content-box;
-  color: #f1f1f1;
+  color: #bebebe;
   height: 12px;
   width: 22px;
   border-radius: 10px;
