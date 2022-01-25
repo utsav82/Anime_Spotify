@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime-Spotify</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
+    <script src="https://use.fontawesome.com/53f9764ff2.js"></script>
     <script src="script.js"></script>
 
 
@@ -15,29 +15,27 @@
 
 <body>
 
-    <script src="script.js"></script>
+
     <div class="logoandmenu">
-        
-        <span class="logo"><img src="logo.png" alt="logo" class="logo">Animusic</span>
+       <span class="logo"><img src="logo.png" alt="logo">Animusic</span>
+       <span class="searchbar">
+        <input type="text" placeholder="search...."> 
+        <button type="submit"><i class="fa fa-search"></i></button>
+        </span>
         <span onclick="openNav()" class="menuicon">&#9776; </span>
     </div>
     <nav id="mySidenav">
-        <div>
-            <ul>
-                <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#playlists">Playlists</a>
+                <a href="#favourite">Favourite</a>
+                <a href="#about">About</a> 
 
-
-        </div>
     </nav>
-    <div class="main-bottom">
-        <div class="song-info"> hey how are you all ok
-            <h1>hey hey hey hooo</h1>
-            <h1>hey hey hey hooo</h1>
-            <h1>hey hey hey hooo</h1>
-        </div>
+    
+    
+<div class="main-bottom">
+  <div class="song-info"></div>
+
         <div class="player">
             <div class="player-controls">
                 <button class="shuffle active-shuff" role="switch" onclick="activate_shuffle()" aria-checked="true" style="--button-size:32px;">            
@@ -72,5 +70,6 @@
     </div>
     
 </body>
+
 
 </html> 
