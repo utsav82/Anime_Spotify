@@ -6,6 +6,8 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
   
+
+
 let state = "play";
 function play_pause_trans(){
 if(state == "play")
@@ -21,3 +23,4 @@ else{
 }
 console.log(state);
 }
+
