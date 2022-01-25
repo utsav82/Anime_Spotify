@@ -1,91 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
-* {
-  margin: 0;
-  padding: 0
-}
-
 body {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 } 
 
 
+
 .logo img{
-    width: 100px;
-    border-radius: 100px;
-    padding: 0 12px; 
+  width: 100px;
+  border-radius: 100px;
+  padding: 0 12px; 
 }
 .logoandmenu
 {
-    display: flex;
-    align-items: center;
-    background: #000;
-    padding: 12px 12px 12px 18px ;
-    
-   
+  display: flex;
+  align-items: center;
+  background: #000;
+  padding: 12px 12px 12px 18px ;
+  
+ 
 }
 .menuicon{
   font-size:28px;
-    cursor:pointer;
-    color: aliceblue;
-    position: fixed;
-    right: 26px;
+  cursor:pointer;
+  color: aliceblue;
+  position: fixed;
+  right: 10px;
 }
 .logo 
 {   display: flex;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 1.7rem;  
-    color: aliceblue;      
-    padding-left: 5px;
-     
-}
-.searchbar{
-  display: box;
-  background-color: #000;
- position: fixed;
- right: 75px;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.7rem;  
+  color: aliceblue;      
+  padding-left: 5px;
+   
 }
 
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 
 
 nav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;right: 0;
-    background: #000;
-    font-family: Roboto Slab;
-    overflow-x: hidden;
-    transition: 0.4s;
-    padding-top: 60px;
-  }
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;right: 0;
+  background: #000;
+  font-family: Roboto Slab;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px;
+}
+
+nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #f1f1f1;
+}
+
+nav .closebtn {
+  position: absolute;
+  top: 5px; right: 21px;
+  font-size: 46px;
   
-  nav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.2s;
-  }
-  
-  nav a:hover {
-    color: #f1f1f1;
-  }
-  
-  nav .closebtn {
-    position: absolute;
-    top: 5px; right: 21px;
-    font-size: 46px;
-    
-  
-  }
+
+}
+
+
 /*Label custom*/
 /* [aria-label] {
   position: relative;
@@ -115,10 +112,24 @@ nav {
   -webkit-box-shadow: 1px 2px 6px rgba(0,0,0,0.3);
   box-shadow: 1px 2px 6px rgba(0,0,0,0.3);
 }
+
 [aria-label]:hover:after, [aria-label]:focus:after {
   display: block;
 } */
 
+/*styling main-bottom*/
+.main-bottom{
+  background-color:#383838 ;
+  width: 100%;
+  height: 88px;
+  z-index: 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: 0px;  
+  box-sizing: border-box;
+  position: fixed;
+}
 
 /*styling the player : START*/
 .player {
@@ -155,6 +166,9 @@ nav {
     position: relative;
     width: var(--button-size);
 }
+.active-shuff:hover{
+  color: #fff;
+}
 .fa-shuffle{
   fill: currentcolor;
   cursor: pointer;
@@ -172,6 +186,9 @@ nav {
   min-width: var(--button-size);
   position: relative;
   width: var(--button-size);
+}
+.active-prev:hover{
+  color: #fff;
 }
 .fa-backward-step{
   fill: currentColor;
@@ -194,6 +211,9 @@ nav {
   /* transition: 0.2s; */
   
 }
+.active-play-pause:hover{
+  color: #fff;
+}
 .fa-play{
   fill: currentColor;
   cursor: pointer;
@@ -214,6 +234,9 @@ nav {
   position: relative;
   width: var(--button-size);
 }
+.active-next:hover{
+  color: #fff;
+}
 .fa-forward-step{
   fill: currentColor;
   cursor: pointer;
@@ -232,6 +255,9 @@ nav {
   min-width: var(--button-size);
   position: relative;
   width: var(--button-size);
+}
+.active-loop:hover{
+  color: #fff;
 }
 .fa-rotate{
   fill: currentColor;
@@ -283,7 +309,7 @@ nav {
   -webkit-appearance: none;
   box-sizing: content-box;
   color: #bebebe;
-  height: 12px;
+  height: 13px;
   width: 22px;
   border-radius: 10px;
   background-color: rgb(71, 70, 70);
