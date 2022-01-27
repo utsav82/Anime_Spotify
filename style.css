@@ -146,10 +146,10 @@ nav .closebtn {
 .player {
   background-color: #383838;
   width: 100%;
-  z-index: 4;
+  
   display: flex;
   flex-direction: column;
-  bottom: 0px;
+  
   justify-content: center;
   text-align: center;
   position: fixed;
@@ -178,13 +178,13 @@ nav .closebtn {
     width: var(--button-size);
 }
 .active-shuff:hover{
-  color: #fff;
+  color: #fff !important;
 }
 .fa-shuffle{
   fill: currentcolor;
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 18px;
+  width: 18px;
 }
 .previous{  
   align-items: center;
@@ -199,13 +199,13 @@ nav .closebtn {
   width: var(--button-size);
 }
 .active-prev:hover{
-  color: #fff;
+  color: #fff !important;
 }
 .fa-backward-step{
   fill: currentColor;
   cursor: pointer;
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
 }
 .play-pause{
   align-items: center;
@@ -219,19 +219,16 @@ nav .closebtn {
   position: relative;
   width: var(--button-size);
   right: 0px;
-  /* transition: 0.2s; */
-  
+  /* transition: 0.2s; */  
 }
 .active-play-pause:hover{
-  color: #fff;
+  color: #fff !important;
 }
 .fa-play{
   fill: currentColor;
   cursor: pointer;
-  height: 30px;
-  width: 30px;
-  
-
+  height: 35px;
+  width: 35px;
 }
 .next{
   align-items: center;
@@ -246,14 +243,13 @@ nav .closebtn {
   width: var(--button-size);
 }
 .active-next:hover{
-  color: #fff;
+  color: #fff !important;
 }
 .fa-forward-step{
   fill: currentColor;
   cursor: pointer;
-  height: 20px;
-  width: 20px;
-
+  height: 25px;
+  width: 25px;
 }
 .loop{
   align-items: center;
@@ -268,15 +264,15 @@ nav .closebtn {
   width: var(--button-size);
 }
 .active-loop:hover{
-  color: #fff;
+  color: #fff !important;
 }
 .fa-rotate{
   fill: currentColor;
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-
+  height: 18px;
+  width: 18px;
 }
+
 /*player-controls done*/
 
 .seek-bar{
@@ -284,8 +280,7 @@ nav .closebtn {
   flex-direction: row;
   gap: 4px;
   padding: 12px;
-  }
-
+}
 #i-progress-bar{
   appearance: auto;
   cursor: default;
@@ -296,8 +291,7 @@ nav .closebtn {
   margin: 2px;
   border: initial;
   position: relative;
-  width: 85vw;
-     
+  width: 85vw;     
 }
 #i-progress-bar::-webkit-slider-runnable-track {
   width: 100%;
@@ -327,8 +321,105 @@ nav .closebtn {
   cursor: pointer;
   margin: -5px 0 0 0;
 }
-#i-progress-bar:active::-webkit-slider-thumb {
-  transform: scale(1.2);
-  background: #b50000;
+#i-progress-bar:hover::-webkit-slider-thumb ,#i-progress-bar:active::-webkit-slider-thumb {
+  transform: scale(1.2) !important;
+  background: #b50000 !important;
 }
 /*seek-bar done*/
+
+/*volume controls-button*/
+.Volume{
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  position:fixed;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  gap: 4px;
+  margin-top: 15px;
+  padding: 5px;
+}
+.vol_mute_unmute{
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: #bebebe;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  min-width: 25px;
+  position: relative;
+  width: 25px;
+}
+.vol{
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: #bebebe;
+  display: flex;
+  height: 22px;
+  justify-content: center;
+  min-width: 22px;
+  position: relative;
+  width: 22px;
+}
+.active-vol:hover{
+  color: #fff !important;
+}
+.fa-volume-high{
+  fill: currentColor;
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+}
+/*volume controls-rocker*/
+#i-vol-rocker{
+  appearance: auto;
+  cursor: default;
+  padding: initial;  
+  -webkit-appearance: none;
+  outline: none;  
+  float: left;
+  margin: 2px;
+  border: initial;
+  position: relative;
+      
+}
+#i-vol-rocker::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: linear-gradient(to right, rgba(130, 49, 206, 0.6) var(--vol-level), rgba(100, 0, 181, 0.2) var(--vol-level));
+}
+#i-vol-rocker::before {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: 0;
+  width: var(--seek-before-width);
+  height: 3px;
+  background-color: rgba(100, 0, 181, 0.2);
+  cursor: pointer;
+}
+#i-vol-rocker::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  box-sizing: content-box;
+  color: #bebebe;
+  height: 10px;
+  width: 18px;
+  border-radius: 10px;
+  background-color: rgb(71, 70, 70);
+  cursor: pointer;
+  margin: -4px 0 0 0;
+}
+#i-vol-rocker:hover::-webkit-slider-thumb ,#i-vol-rocker:active::-webkit-slider-thumb {
+  transform: scale(1.2) !important;
+  background: #b50000 !important;
+}
+/*volume percentage*/
+.vol_percent{
+  color: #fff;
+  text-align: center;
+}
