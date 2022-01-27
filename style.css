@@ -144,12 +144,10 @@ nav .closebtn {
 
 /*styling the player : START*/
 .player {
-  background-color: #383838;
-  width: 100%;
-  
+  background-color: transparent;
+  width: 100%;  
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column;  
   justify-content: center;
   text-align: center;
   position: fixed;
@@ -291,22 +289,22 @@ nav .closebtn {
   margin: 2px;
   border: initial;
   position: relative;
-  width: 85vw;     
+  width: 50vw;     
 }
 #i-progress-bar::-webkit-slider-runnable-track {
   width: 100%;
   height: 3px;
   cursor: pointer;
-  background: linear-gradient(to right, rgba(130, 49, 206, 0.6) var(--buffered-width), rgba(100, 0, 181, 0.2) var(--buffered-width));
+  background: linear-gradient(to right, rgb(132, 0, 255) var(--buffered-width), rgba(100, 0, 181, 0.2) var(--buffered-width));
 }
 #i-progress-bar::before {
   position: absolute;
   content: "";
-  top: 8px;
+  top: 0px;
   left: 0;
   width: var(--seek-before-width);
   height: 3px;
-  background-color: rgba(100, 0, 181, 0.2);
+  background-color: rgba(100, 0, 181);
   cursor: pointer;
 }
 #i-progress-bar::-webkit-slider-thumb {
@@ -338,7 +336,7 @@ nav .closebtn {
   justify-content: space-between;
   gap: 4px;
   margin-top: 15px;
-  padding: 5px;
+  padding: 10px;
 }
 .vol_mute_unmute{
   align-items: center;

@@ -6,24 +6,55 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
   
+/*Initializing the variables for song play*/
+let songIndex = 0;
+let audioElement = new Audio('songs/1.mp3');
+const play_btn = document.getElementById("play_btn_path");
+const seek_bar = document.getElementById('i-progress-bar');
+let songName = document.getElementById('song-name');
+// // let songItems = Array.from(document.getElementsByClassName('song-info'));
+// /* 
+//     might be something related to python and youtube .... or Django server sql mango dbs
+
+// */
+// let songs =[{songName: "Warriyo - Mortals [NCS Release]", filePath: "songs/1.mp3", coverPath: "covers/1.jpg"}];
+
+// // songItems.forEach((element,i)=>{
+// //   element.getElementById("song-thumb")[0].src = songs[i].coverPath;
+// //   element.getElementById("song-name")[0].innerText = songs[i].songName;
+// // })
+
 
 // function for play - pause
 let state = "play";
-const play_btn = document.getElementById("play_btn_path");
+// const play_btn = document.getElementById("play_btn_path");
 play_btn.addEventListener('click', function (){
-  if(state == "play")
+  if(audioElement.paused || audioElement.currentTime<=0)
 {
+  audioElement.play();  
   play_btn.setAttribute('d',"M272 63.1l-32 0c-26.51 0-48 21.49-48 47.1v288c0 26.51 21.49 48 48 48L272 448c26.51 0 48-21.49 48-48v-288C320 85.49 298.5 63.1 272 63.1zM80 63.1l-32 0c-26.51 0-48 21.49-48 48v288C0 426.5 21.49 448 48 448l32 0c26.51 0 48-21.49 48-48v-288C128 85.49 106.5 63.1 80 63.1z");
   document.getElementById('play_p_btn').style.right = "-5px";
   state = "pause";
 }
 else{
+  audioElement.pause();
   play_btn.setAttribute('d',"M176 480C148.6 480 128 457.6 128 432v-352c0-25.38 20.4-47.98 48.01-47.98c8.686 0 17.35 2.352 25.02 7.031l288 176C503.3 223.8 512 239.3 512 256s-8.703 32.23-22.97 40.95l-288 176C193.4 477.6 184.7 480 176 480z");
   document.getElementById('play_p_btn').style.right = "0px";
   state = "play";
 }
 console.log(state);
 });
+
+/* listen to events*/
+audioElement.addEventListener('timeupdate', function (){
+  // update seekbar
+  progress = parseInt((audioElement.currentTime/audioElement.duration)*100);
+  seek_bar.value = progress;  
+  seek_bar.style.setProperty('--seek-before-width',progress+'%');
+})
+audioElement.addEventListener('change',function (){
+  audioElement.currentTime = seek_bar.value*audioElement.duration/100;
+})
 
 // fuction for shuffle and loop
 let tmp1 = "on";
