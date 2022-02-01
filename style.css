@@ -295,7 +295,7 @@ nav .closebtn {
   width: 100%;
   height: 3px;
   cursor: pointer;
-  background: linear-gradient(to right, rgb(132, 0, 255) var(--buffered-width), rgba(100, 0, 181, 0.2) var(--buffered-width));
+  background: linear-gradient(to right, rgb(200, 125, 255) var(--buffered-width), rgba(100, 0, 190, 0.5) var(--buffered-width));
 }
 #i-progress-bar::before {
   position: absolute;
@@ -304,7 +304,7 @@ nav .closebtn {
   left: 0;
   width: var(--seek-before-width);
   height: 3px;
-  background-color: rgba(100, 0, 181);
+  background-color: rgba(100, 0, 190);
   cursor: pointer;
 }
 #i-progress-bar::-webkit-slider-thumb {
@@ -315,7 +315,7 @@ nav .closebtn {
   height: 13px;
   width: 22px;
   border-radius: 10px;
-  background-color: rgb(71, 70, 70);
+  background-color: rgb(70, 70, 70);
   cursor: pointer;
   margin: -5px 0 0 0;
 }
@@ -388,14 +388,14 @@ nav .closebtn {
   width: 100%;
   height: 2px;
   cursor: pointer;
-  background: linear-gradient(to right, rgba(130, 49, 206, 0.6) var(--vol-level), rgba(100, 0, 181, 0.2) var(--vol-level));
+  background: linear-gradient(to right, rgba(100, 0, 205, 1) var(--vol-level), rgba(100, 0, 181, 0.2) var(--vol-level));
 }
 #i-vol-rocker::before {
   position: absolute;
   content: "";
   top: 8px;
   left: 0;
-  width: var(--seek-before-width);
+  width: var(--vol-level);
   height: 3px;
   background-color: rgba(100, 0, 181, 0.2);
   cursor: pointer;
