@@ -1,31 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
 * {
   margin: 0;
   padding: 0
 }
 
+
 body {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 } 
 
 
+
 .logo img{
-    width: 100px;
-    border-radius: 100px;
-    padding: 0 12px; 
+  width: 100px;
+  border-radius: 100px;
+  padding: 0 12px; 
 }
 .logoandmenu
 {
-    display: flex;
-    align-items: center;
-    background: #000;
-    padding: 12px 12px 12px 18px ;
-    
-   
+  display: flex;
+  align-items: center;
+  background: #000;
+  padding: 12px 12px 12px 18px ;
+  
+ 
 }
 .menuicon{
   font-size:28px;
@@ -33,59 +36,62 @@ body {
     color: aliceblue;
     position: fixed;
     right: 26px;
+
 }
 .logo 
 {   display: flex;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 1.7rem;  
-    color: aliceblue;      
-    padding-left: 5px;
-     
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.7rem;  
+  color: aliceblue;      
+  padding-left: 5px;
+   
 }
+
 .searchbar{
   display: box;
   background-color: #000;
  position: fixed;
  right: 75px;
+
 }
 
 
 
 
 nav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;right: 0;
-    background: #000;
-    font-family: Roboto Slab;
-    overflow-x: hidden;
-    transition: 0.4s;
-    padding-top: 60px;
-  }
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;right: 0;
+  background: #000;
+  font-family: Roboto Slab;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px;
+}
+
+nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #f1f1f1;
+}
+
+nav .closebtn {
+  position: absolute;
+  top: 5px; right: 21px;
+  font-size: 46px;
   
-  nav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.2s;
-  }
-  
-  nav a:hover {
-    color: #f1f1f1;
-  }
-  
-  nav .closebtn {
-    position: absolute;
-    top: 5px; right: 21px;
-    font-size: 46px;
-    
-  
-  }
+
+}
 
 
 /*Label custom*/
@@ -127,7 +133,7 @@ nav {
   background-color:#383838 ;
   width: 100%;
   height: 88px;
-  z-index: 3;
+  z-index: 4;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -135,20 +141,25 @@ nav {
   box-sizing: border-box;
   position: fixed;
 }
-.song-info{
-  color: red;
-  z-index: 4;
+.song-info
+{
+
+  color: aliceblue; 
   display: flex;
-  flex-direction: column;
+  align-items: center;
+
+}
+.song-thumbnail img{
+  width: 75px;
+  border-radius: 100px;
+  padding: 0 12px; 
 }
 /*styling the player : START*/
 .player {
-  background-color: #383838;
-  width: 100%;
-  z-index: 4;
+  background-color: transparent;
+  width: 100%;  
   display: flex;
-  flex-direction: column;
-  bottom: 0px;
+  flex-direction: column;  
   justify-content: center;
   text-align: center;
   position: fixed;
@@ -177,13 +188,13 @@ nav {
     width: var(--button-size);
 }
 .active-shuff:hover{
-  color: #fff;
+  color: #fff !important;
 }
 .fa-shuffle{
   fill: currentcolor;
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 18px;
+  width: 18px;
 }
 .previous{  
   align-items: center;
@@ -198,13 +209,13 @@ nav {
   width: var(--button-size);
 }
 .active-prev:hover{
-  color: #fff;
+  color: #fff !important;
 }
 .fa-backward-step{
   fill: currentColor;
   cursor: pointer;
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
 }
 .play-pause{
   align-items: center;
@@ -218,19 +229,22 @@ nav {
   position: relative;
   width: var(--button-size);
   right: 0px;
-  /* transition: 0.2s; */
-  
+  /* transition: 0.2s; */  
 }
 .active-play-pause:hover{
-  color: #fff;
+  color: #fff !important;
 }
 .fa-play{
   fill: currentColor;
   cursor: pointer;
-  height: 30px;
-  width: 30px;
-  
-
+  height: 35px;
+  width: 35px;
+}
+.logoandenu button{
+  fill: currentColor;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
 }
 .next{
   align-items: center;
@@ -245,14 +259,13 @@ nav {
   width: var(--button-size);
 }
 .active-next:hover{
-  color: #fff;
+  color: #fff !important;
 }
 .fa-forward-step{
   fill: currentColor;
   cursor: pointer;
-  height: 20px;
-  width: 20px;
-
+  height: 25px;
+  width: 25px;
 }
 .loop{
   align-items: center;
@@ -267,15 +280,15 @@ nav {
   width: var(--button-size);
 }
 .active-loop:hover{
-  color: #fff;
+  color: #fff !important;
 }
 .fa-rotate{
   fill: currentColor;
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-
+  height: 18px;
+  width: 18px;
 }
+
 /*player-controls done*/
 
 .seek-bar{
@@ -283,7 +296,6 @@ nav {
   flex-direction: row;
   gap: 4px;
   padding: 12px;
-  
 }
 #i-progress-bar{
   appearance: auto;
@@ -295,23 +307,22 @@ nav {
   margin: 2px;
   border: initial;
   position: relative;
-  width: 85vw;
-     
+  width: 50vw;     
 }
 #i-progress-bar::-webkit-slider-runnable-track {
   width: 100%;
   height: 3px;
   cursor: pointer;
-  background: linear-gradient(to right, rgba(130, 49, 206, 0.6) var(--buffered-width), rgba(100, 0, 181, 0.2) var(--buffered-width));
+  background: linear-gradient(to right, rgb(200, 125, 255) var(--buffered-width), rgba(100, 0, 190, 0.5) var(--buffered-width));
 }
 #i-progress-bar::before {
   position: absolute;
   content: "";
-  top: 8px;
+  top: 0px;
   left: 0;
   width: var(--seek-before-width);
   height: 3px;
-  background-color: rgba(100, 0, 181, 0.2);
+  background-color: rgba(100, 0, 190);
   cursor: pointer;
 }
 #i-progress-bar::-webkit-slider-thumb {
@@ -322,12 +333,153 @@ nav {
   height: 13px;
   width: 22px;
   border-radius: 10px;
-  background-color: rgb(71, 70, 70);
+  background-color: rgb(70, 70, 70);
   cursor: pointer;
   margin: -5px 0 0 0;
 }
-#i-progress-bar:active::-webkit-slider-thumb {
-  transform: scale(1.2);
-  background: #b50000;
+#i-progress-bar:hover::-webkit-slider-thumb ,#i-progress-bar:active::-webkit-slider-thumb {
+  transform: scale(1.2) !important;
+  background: #b50000 !important;
 }
 /*seek-bar done*/
+
+/*volume controls-button*/
+.Volume{
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  position:fixed;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  gap: 4px;
+  margin-top: 15px;
+  padding: 10px;
+}
+.vol_mute_unmute{
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: #bebebe;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  min-width: 25px;
+  position: relative;
+  width: 25px;
+}
+.vol{
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: #bebebe;
+  display: flex;
+  height: 22px;
+  justify-content: center;
+  min-width: 22px;
+  position: relative;
+  width: 22px;
+}
+.active-vol:hover{
+  color: #fff !important;
+}
+.fa-volume-high{
+  fill: currentColor;
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+}
+/*volume controls-rocker*/
+#i-vol-rocker{
+  appearance: auto;
+  cursor: default;
+  padding: initial;  
+  -webkit-appearance: none;
+  outline: none;  
+  float: left;
+  margin: 2px;
+  border: initial;
+  position: relative;
+      
+}
+#i-vol-rocker::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: linear-gradient(to right, rgba(100, 0, 205, 1) var(--vol-level), rgba(100, 0, 181, 0.2) var(--vol-level));
+}
+#i-vol-rocker::before {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: 0;
+  width: var(--vol-level);
+  height: 3px;
+  background-color: rgba(100, 0, 181, 0.2);
+  cursor: pointer;
+}
+#i-vol-rocker::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  box-sizing: content-box;
+  color: #bebebe;
+  height: 10px;
+  width: 18px;
+  border-radius: 10px;
+  background-color: rgb(71, 70, 70);
+  cursor: pointer;
+  margin: -4px 0 0 0;
+}
+#i-vol-rocker:hover::-webkit-slider-thumb ,#i-vol-rocker:active::-webkit-slider-thumb {
+  transform: scale(1.2) !important;
+  background: #b50000 !important;
+}
+/*volume percentage*/
+.vol_percent{
+  color: #fff;
+  text-align: center;
+}
+.songItemContainer{
+
+  margin-top: 50px;
+  display:flex;
+  flex-direction: column;
+}
+
+.songItem{
+  height: 50px;
+  display: flex;
+  background-color: white;
+  
+  color: black;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+}
+
+.songItem img{
+  width: 43px;
+  margin: 0 23px;
+  border-radius: 34px;
+}
+.container{
+  min-height: 80vh;
+  background-color: black;
+  color: white;
+ font-family: 'Varela Round', sans-serif;
+ display: flex;
+ align-items: center;
+ margin: auto;
+ width:100%;
+ padding: auto ;
+ justify-content: center;
+ 
+}
+.timestamp{
+  margin: 0 23px;
+}
+
+.timestamp i{
+  cursor: pointer;
+}
