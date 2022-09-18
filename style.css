@@ -141,7 +141,19 @@ nav .closebtn {
   box-sizing: border-box;
   position: fixed;
 }
+.song-info
+{
 
+  color: aliceblue; 
+  display: flex;
+  align-items: center;
+
+}
+.song-thumbnail img{
+  width: 75px;
+  border-radius: 100px;
+  padding: 0 12px; 
+}
 /*styling the player : START*/
 .player {
   background-color: transparent;
@@ -223,6 +235,12 @@ nav .closebtn {
   color: #fff !important;
 }
 .fa-play{
+  fill: currentColor;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+}
+.logoandenu button{
   fill: currentColor;
   cursor: pointer;
   height: 35px;
@@ -420,4 +438,48 @@ nav .closebtn {
 .vol_percent{
   color: #fff;
   text-align: center;
+}
+.songItemContainer{
+
+  margin-top: 50px;
+  display:flex;
+  flex-direction: column;
+}
+
+.songItem{
+  height: 50px;
+  display: flex;
+  background-color: white;
+  
+  color: black;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+}
+
+.songItem img{
+  width: 43px;
+  margin: 0 23px;
+  border-radius: 34px;
+}
+.container{
+  min-height: 80vh;
+  background-color: black;
+  color: white;
+ font-family: 'Varela Round', sans-serif;
+ display: flex;
+ align-items: center;
+ margin: auto;
+ width:100%;
+ padding: auto ;
+ justify-content: center;
+ 
+}
+.timestamp{
+  margin: 0 23px;
+}
+
+.timestamp i{
+  cursor: pointer;
 }

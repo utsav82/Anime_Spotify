@@ -153,7 +153,20 @@ volumeSlider.addEventListener('input', function (e){
   vol_percent.textContent = value;
   audioElement.volume = value/500;
 })
+let songItems = Array.from(document.getElementsByClassName('songItem'));
 
+let songs = [
+    {songName: "Ao no waltz", filePath: "songs/1.mp3", coverPath: "thumbs/1.jpg"},
+    {songName: "Memories", filePath: "songs/2.mp3", coverPath: "thumbs/2.jpg"},
+    {songName: "Life is like a boat", filePath: "songs/3.mp3", coverPath: "thumbs/3.jpg"},
+    {songName: "Akuma no ko", filePath: "songs/4.mp3", coverPath: "thumbs/4.jpg"},
+    {songName: "Fly High", filePath: "songs/5.mp3", coverPath: "thumbs/5.jpg"},
+]
+
+songItems.forEach((element, i)=>{ 
+    element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
+    element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
+})
 
 
 // fuction for shuffle and loop
@@ -182,3 +195,42 @@ document.getElementById("act_loop").addEventListener('click', function (){
     tmp2 = "on";
   }
 });
+document.getElementById('next').addEventListener('click', ()=>{
+  if(songIndex>=5){
+      songIndex = 0;
+  }
+  else{
+      songIndex += 1;
+  }
+  audioElement.src = `songs/${songIndex+1}.mp3`;
+  songname.innerText = songs[songIndex].songName;
+  var img = document.getElementById("songthumb");
+  img.src=`thumbs/${songIndex+1}.jpg`;
+  audioElement.currentTime = 0;
+  audioElement.play();
+  play_btn_path.setAttribute('d',"M272 63.1l-32 0c-26.51 0-48 21.49-48 47.1v288c0 26.51 21.49 48 48 48L272 448c26.51 0 48-21.49 48-48v-288C320 85.49 298.5 63.1 272 63.1zM80 63.1l-32 0c-26.51 0-48 21.49-48 48v288C0 426.5 21.49 448 48 448l32 0c26.51 0 48-21.49 48-48v-288C128 85.49 106.5 63.1 80 63.1z");
+  document.getElementById('play-p-btn').style.right = "-5px";
+  onPlaying();
+  playState = 'pause';
+ 
+})
+
+document.getElementById('previous').addEventListener('click', ()=>{
+  if(songIndex<1){
+      songIndex = 0
+  }
+  else{
+      songIndex -= 1;
+  }
+  audioElement.src = `songs/${songIndex+1}.mp3`;
+  songname.innerText = songs[songIndex].songName;
+  var img = document.getElementById("songthumb");
+   img.src=`thumbs/${songIndex+1}.jpg`;
+
+  audioElement.currentTime = 0;
+  audioElement.play();
+  play_btn_path.setAttribute('d',"M272 63.1l-32 0c-26.51 0-48 21.49-48 47.1v288c0 26.51 21.49 48 48 48L272 448c26.51 0 48-21.49 48-48v-288C320 85.49 298.5 63.1 272 63.1zM80 63.1l-32 0c-26.51 0-48 21.49-48 48v288C0 426.5 21.49 448 48 448l32 0c26.51 0 48-21.49 48-48v-288C128 85.49 106.5 63.1 80 63.1z");
+  document.getElementById('play-p-btn').style.right = "-5px";
+  onPlaying();
+  playState = 'pause';
+})
