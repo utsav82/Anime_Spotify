@@ -1,8 +1,4 @@
 # Anime_Spotify
-First website
-
+First website learning project
 - js player
-- search engine
-- firebase cloud storage
-- covers for different songs
-- lyrics tracker
+
