@@ -12,7 +12,7 @@
   <a href="https://github.com/utsav82/Anime_spotify">
   </a>
 
-  <h3 align="center">Anime Spotify</h3>
+  <h3 align="center">Animusic</h3>
 
   <p align="center">
     "Sing your favorite anime songs"
