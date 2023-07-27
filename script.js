@@ -196,7 +196,7 @@ document.getElementById("act_loop").addEventListener('click', function (){
   }
 });
 document.getElementById('next').addEventListener('click', ()=>{
-  if(songIndex>=5){
+  if(songIndex>=4){
       songIndex = 0;
   }
   else{

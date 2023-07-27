@@ -4,8 +4,24 @@
   margin: 0;
   padding: 0
 }
-
-
+@media screen and (max-width: 480px) {
+ 
+    #search
+    {
+      display: none;
+    }
+     
+      #info{
+        display: none;
+      }
+ 
+}
+@media screen and (max-width: 550px) {
+#vol
+{
+  display: none;
+}
+}
 body {
   position: fixed;
   top: 0;
@@ -13,8 +29,9 @@ body {
   left: 0;
   right: 0;
 } 
-
-
+h1 {
+  text-align: center;
+}
 
 .logo img{
   width: 100px;
@@ -27,6 +44,7 @@ body {
   align-items: center;
   background: #000;
   padding: 12px 12px 12px 18px ;
+  margin-bottom: 0;
   
  
 }
@@ -69,7 +87,7 @@ nav {
   font-family: Roboto Slab;
   overflow-x: hidden;
   transition: 0.4s;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 nav a {
@@ -441,9 +459,10 @@ nav .closebtn {
 }
 .songItemContainer{
 
-  margin-top: 50px;
+  margin-top: 30px;
   display:flex;
   flex-direction: column;
+  padding-bottom:20px;
 }
 
 .songItem{
@@ -474,6 +493,8 @@ nav .closebtn {
  width:100%;
  padding: auto ;
  justify-content: center;
+ margin-top: -20px;
+
  
 }
 .timestamp{
